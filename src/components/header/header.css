@@ -1,0 +1,106 @@
+body {
+    margin: 0%;
+}
+
+.header {
+    height: 60px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    /* border: 1px solid black; */
+    /* border-radius: 8px; */
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    position: sticky;
+}
+
+.header div {
+    box-sizing: border-box;
+    width: 33%;
+}
+
+
+.insta img {
+    width: 100px;
+    height: 40px;
+    margin-left: 20px;
+    margin-right: 10%;
+    float: right;
+}
+
+.searchBoxDiv {
+    text-align: center;
+}
+
+.searchBox {
+    width: 80%;
+    text-align: center;
+    padding: 8px;
+    border: none;
+    border-radius: 15px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    letter-spacing: 3px;
+    background-color: rgba(180, 173, 173, 0.292);
+    color: black;
+}
+
+.navButtons {
+    /* float: right; */
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+
+.header div .fa {
+    align-self: center;
+    font-size: 25px;
+    padding: 7px;
+}
+button{
+    padding: 0px;
+    background-color: inherit;
+    border: none;
+}
+
+/* .logOut{
+    width: 60px;
+    background-color: lightgray;
+    color: white;
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+} */
+
+@media only screen and (max-width: 600px) {
+    .blankDiv {
+        display: none;
+    }
+
+    .searchBoxDiv {
+        display: none;
+    }
+
+    .header div {
+        box-sizing: border-box;
+        width: 50%;
+    }
+
+    .insta img {
+        width: 100px;
+        height: 40px;
+        margin-left: 20px;
+        margin: 0%;
+        margin-left: 7%;
+        float: left;
+    }
+    .navButtons{
+        justify-content: end;
+
+    }
+    .fa-home, .fa-commenting , .fa-heart {
+        display: none;
+    }
+}

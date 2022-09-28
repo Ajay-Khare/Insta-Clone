@@ -1,0 +1,18 @@
+
+.instaHeader{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+/* .post-container{
+    width: 30%;
+    display: flex;
+    flex-flow: column;
+}
+
+@media only screen and (max-width: 600px) {
+    .allPost{
+        width: 100%;
+    }
+    .post-container{width: 100%;}
+} */

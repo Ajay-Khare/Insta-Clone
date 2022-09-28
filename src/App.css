@@ -1,0 +1,36 @@
+.navBar{
+  height: 60px;
+  display:flex;
+  flex-direction: row-reverse;
+  background-color: lightgray;
+  align-items: center;
+}
+.Home{
+  /* display: inline-block; */
+  margin:10px;
+  padding: 5px;
+  border: 1px solid green;
+  background-color: aliceblue;
+  border-radius: 6px;
+}
+.About{
+  /* display: inline-block; */
+  margin:10px;
+  padding: 5px;
+  border: 1px solid green;
+  background-color: aliceblue;
+  border-radius: 6px;
+}
+.ContactUs{
+  /* display: inline-block; */
+  margin:10px;
+  padding: 5px;
+  border: 1px solid green;
+  background-color: aliceblue;
+  border-radius: 6px;
+}
+.wild-Route{
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+}

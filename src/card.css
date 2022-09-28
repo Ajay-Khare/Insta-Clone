@@ -1,0 +1,142 @@
+.allPost {
+    /* text-align: center; */
+    align-self: center;
+    width: 100%;
+    display: flex;
+    /* margin: 0 auto; */
+    flex-direction: column;
+    /* gap: 10px; */
+    background-color: rgba(104, 103, 103, 0.155);
+}
+
+.card {
+    width: 40%;
+    height: 80vh;
+    box-sizing: border-box;
+    /* border: 1px solid rgb(31, 31, 31); */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 10px;
+
+}
+
+
+/* image header */
+.cardHeader {
+    background-color: white;
+    display: flex;
+    height: 10%;
+    align-items: center;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+    border-radius: 8px 8px 0px 0px;
+
+}
+
+.cardHeader .fa-user {
+    font-size: 30px;
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.cardHeader .nameLocation {
+    margin-left: 10px;
+
+}
+
+.cardHeader .nameLocation .name {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: left;
+}
+
+.cardHeader .nameLocation .location {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.cardHeader .optionButton {
+    margin-left: auto;
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+
+
+/* main image */
+.image img {
+    width: 100%;
+    height: 100%;
+}
+
+.image {
+    margin: 0px;
+    width: 100%;
+    height: 75%;
+}
+
+
+/* image footer */
+.card .footer {
+    background-color: white;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    height: 15%;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.card .footer .likeDate {
+    display: flex;
+}
+
+.card .footer .Icons {
+    display: inline-block;
+    /* margin-left: auto; */
+    margin-left: 6px;
+}
+
+.card .footer .Icons div {
+    display: inline-block;
+    margin: 4px;
+}
+
+/* .card .footer .Icons .like-share{
+    display: grid;
+    grid-template: auto;
+    grid-auto-flow: column;
+} */
+.footer .fa {
+    font-size: 23px;
+}
+
+.card .footer .date {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 10px;
+    margin-top: 6px;
+    font-size: 16px;
+    color: rgba(98, 93, 93, 0.669);
+}
+
+.card .likes {
+    font-size: 14px;
+    text-align: left;
+    margin-left: 10px;
+    color: rgba(0, 0, 0, 0.562);
+}
+
+.card .footer .description {
+    text-align: left;
+    word-wrap: break-word;
+    font-weight: bold;
+    margin-left: 10px;
+    padding: 0px 10px 15px 0px;
+}
+
+@media only screen and (max-width: 600px) {
+    .card {
+        width: 100%;
+    }
+}
