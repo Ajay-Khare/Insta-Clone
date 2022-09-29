@@ -13,7 +13,7 @@ const Card = ({ post }) => {
         e.preventDefault()
         const id = e.target.id
         let data = { id: id }
-        fetch("http://localhost:8080/remove", {
+        fetch("https://insta-clone-by-ajay.herokuapp.com/remove", {
             method: "put",
             headers: {
                 "Content-Type": "application/json",
@@ -38,7 +38,7 @@ const Card = ({ post }) => {
     const likeHandler = (e) => {
         
         const like = liked ? -1 : 1
-        fetch("http://localhost:8080/like", {
+        fetch("https://insta-clone-by-ajay.herokuapp.com/like", {
             method: "post",
             headers: {
                 "Content-Type": "application/json",

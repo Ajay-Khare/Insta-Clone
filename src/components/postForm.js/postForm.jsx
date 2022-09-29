@@ -26,7 +26,7 @@ const Form = () => {
 
     const postHandler = (e) => {
         e.preventDefault()
-        fetch("http://localhost:8080/post", {
+        fetch("https://insta-clone-by-ajay.herokuapp.com/post", {
             method: "POST",
             body: JSON.stringify(postData),
             headers: {

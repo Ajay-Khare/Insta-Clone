@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom"
 // import 'react-toastify/dist/ReactToastify.css';
 
 
-function Landing_page() {
+function LandingPage() {
     const navigate = useNavigate()
     const [registered, setRegistered] = useState(true);
     const [email, setEmail] = useState("")
@@ -16,7 +16,7 @@ function Landing_page() {
 
     const loginHandler = (e) => {
         e.preventDefault()
-        fetch("http://localhost:8080/login", {
+        fetch("https://insta-clone-by-ajay.herokuapp.com/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -42,7 +42,7 @@ function Landing_page() {
 
     const registerHandler = (e) => {
         e.preventDefault();
-        fetch("http://localhost:8080/register", {
+        fetch("https://insta-clone-by-ajay.herokuapp.com/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -134,4 +134,4 @@ function Landing_page() {
         </>
     )
 }
-export default Landing_page
+export default LandingPage

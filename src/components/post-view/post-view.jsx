@@ -10,7 +10,7 @@ const PostView = () => {
     const navigate = useNavigate()
     const [posts, setPosts] = useState([])
     useEffect(() => {
-        fetch("http://localhost:8080/feeds", {
+        fetch("https://insta-clone-by-ajay.herokuapp.com/feeds", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
