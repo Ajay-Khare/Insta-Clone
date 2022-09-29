@@ -3,6 +3,7 @@ import photo from '../universe.jpg'
 import './landingPage.css'
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom"
+import insta from "../insta.png"
 // import { ToastContainer, toast } from 'react-toastify'
 // import 'react-toastify/dist/ReactToastify.css';
 
@@ -73,7 +74,11 @@ function LandingPage() {
                 </div>
                 <div className="form">
                     <div>
+                        <div className='instLogoContainer'>
+                            <img className='instaLogo' src={insta} alt="" />
+                        </div>
 
+                        <h1 className='mobileBrowser'> welcome to InstaClone mobile browser</h1>
                         {registered ?
                             <form className='loginForm'>
                                 <input
