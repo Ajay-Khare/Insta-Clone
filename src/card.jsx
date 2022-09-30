@@ -38,7 +38,7 @@ const Card = ({ post }) => {
     const likeHandler = (e) => {
         const like = liked ? -1 : 1
 
-        fetch("ttps://insta-clone-by-ajay.herokuapp.com/like", {
+        fetch("https://insta-clone-by-ajay.herokuapp.com/like", {
             method: "post",
             headers: {
                 "Content-Type": "application/json",
