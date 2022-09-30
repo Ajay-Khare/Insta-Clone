@@ -5,7 +5,7 @@ import { useState } from 'react';
 // import { useEffect } from 'react';
 
 const Card = ({ post }) => {
-    
+
     // const [postData,setPostData]=useState(post)
     const navigator = useNavigate()
     const [liked, setLiked] = useState(false)
@@ -36,20 +36,20 @@ const Card = ({ post }) => {
     // useEffect({}, [postData])
 
     const likeHandler = (e) => {
-        
         const like = liked ? -1 : 1
-        fetch("https://insta-clone-by-ajay.herokuapp.com/like", {
+
+        fetch("ttps://insta-clone-by-ajay.herokuapp.com/like", {
             method: "post",
             headers: {
                 "Content-Type": "application/json",
-                accessToken : sessionStorage.getItem("accessToken")
+                accessToken: sessionStorage.getItem("accessToken")
             },
-            body:JSON.stringify({like:like, id:e.target.id})
+            body: JSON.stringify({ like: like, id: post._id })
         })
             .then(data => data.json())
             .then(res => {
                 console.log(res.message)
-        })
+            })
         setLiked(!liked)
     }
 
@@ -70,8 +70,8 @@ const Card = ({ post }) => {
                                 {post.location}
                             </div>
                         </section>
-                        <button onClick={deleteHandler} id={post._id} style={{ cursor: "pointer" }} className="optionButton">
-                            <svg id={post._id} xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <button id={post._id} style={{ cursor: "pointer" }} className="optionButton">
+                            <svg onClick={deleteHandler} id={post._id} xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                 <line x1="4" y1="7" x2="20" y2="7"></line>
                                 <line x1="10" y1="11" x2="10" y2="17"></line>
