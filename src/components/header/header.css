@@ -13,6 +13,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     position: sticky;
+    top: 0;
 }
 
 .header div {
@@ -34,7 +35,7 @@ body {
 }
 
 .searchBox {
-    width: 80%;
+    width: 70%;
     text-align: center;
     padding: 8px;
     border: none;
@@ -59,7 +60,8 @@ body {
     font-size: 25px;
     padding: 7px;
 }
-button{
+
+button {
     padding: 0px;
     background-color: inherit;
     border: none;
@@ -75,6 +77,9 @@ button{
 } */
 
 @media only screen and (max-width: 600px) {
+    .header{
+        background-color: rgb(216, 216, 216);
+    }
     .blankDiv {
         display: none;
     }
@@ -96,11 +101,17 @@ button{
         margin-left: 7%;
         float: left;
     }
-    .navButtons{
+
+    .navButtons {
         justify-content: end;
+        float: right;
 
     }
-    .fa-home, .fa-commenting , .fa-heart {
+
+    .fa-home,
+    .fa-commenting
+    /* .fa-heart */
+ {
         display: none;
     }
 }

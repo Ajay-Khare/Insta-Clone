@@ -8,7 +8,7 @@ import '../header/header.css'
 // import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({ setShow, show }) => {
     // const [toolTip, setToolTip] = useState(false)
     const navigator = useNavigate();
     // const toolTipHandler = (e) => {
@@ -33,13 +33,13 @@ const Header = () => {
                     <input className='searchBox' type="text" placeholder="Search" />
                 </div>
                 <div className="buttons">
-                    <form type="submit" className='navButtons'>
-                        <button onClick={(e) => {
-                            e.preventDefault();
+                    <div  className='navButtons'>
+                        <button onClick={(e) => 
+                            // e.preventDefault();
                             navigator("/feeds")
-                        }} style={{ cursor: "pointer" }} ><i class="fa fa-home" aria-hidden="true"></i></button>
+                        } style={{ cursor: "pointer" }} ><i class="fa fa-home" aria-hidden="true"></i></button>
                         <button style={{ cursor: "pointer" }}><i class="fa fa-commenting" aria-hidden="true"></i></button>
-                        <button onClick={() => navigator("/form")} style={{ cursor: "pointer" }} ><i class="fa fa-plus-square" aria-hidden="true"></i></button>
+                        <button onClick={() => setShow(!show)} style={{ cursor: "pointer" }} ><i class="fa fa-plus-square" aria-hidden="true"></i></button>
                         <button style={{ cursor: "pointer" }}><i class="fa fa-compass" aria-hidden="true"></i></button>
                         <button style={{ cursor: "pointer" }}><i class="fa fa-heart" aria-hidden="true"></i></button>
                         {/* <Tippy theme='light'
@@ -57,7 +57,7 @@ const Header = () => {
 
                         {/* </Tippy> */}
                         {/* <span className='logOut'>Log Out</span> */}
-                    </form>
+                    </div>
 
                 </div>
             </nav>

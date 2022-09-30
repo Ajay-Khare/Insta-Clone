@@ -13,7 +13,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<LandingPage />} />
           <Route path='/feeds' element={[<PostView />]} />
-          <Route path="/form" element={<Form />} />
+          {/* <Route path="/form" element={<Form />} /> */}
         </Routes>
       </BrowserRouter>
     </>

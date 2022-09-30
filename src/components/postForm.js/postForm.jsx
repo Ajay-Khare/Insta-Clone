@@ -2,12 +2,12 @@ import { useState } from "react"
 import "./postForm.css"
 import React from "react";
 
-import { useNavigate } from "react-router-dom"
+// import { useNavigate } from "react-router-dom"
 // import { ToastContainer, toast } from 'react-toastify'
 // import 'react-toastify/dist/ReactToastify.css';
 
-const Form = () => {
-    const navigate = useNavigate()
+const Form = ({ setShow, show }) => {
+    // const navigate = useNavigate()
     const [postData, setPostData] = useState({})
 
     // console.log(postData)
@@ -39,40 +39,45 @@ const Form = () => {
                 if (res.message === "success") {
                     alert("posted successfully")
                     // toast.success("Image Posted Sucessfully In Feeds", { position: toast.POSITION.BOTTOM_CENTER })
-                    navigate("/feeds")
+                    setShow(!show)
                 }
             })
     }
     return (
-        <><div className="container">
-            <form className="postForm" onSubmit={(e) => { e.preventDefault() }}>
-                <header>Create Post</header>
-                <hr className="top" />
+
+        <>
+            <div className="Container">
+                <form className="postForm" onSubmit={(e) => postHandler(e)}>
+                    
+                    <p className="FormHeading">Create Post</p>
+                    <hr className="top" />
 
 
-                <label htmlFor="location">Location</label>
-                <input className="postInp" type="text" name="location" required
-                    onChange={(e) => {
-                        setPostData({ ...postData, location: e.target.value })
-                    }}
-                />
+                    <label htmlFor="location">Location</label>
+                    <input className="postInp" type="text" name="location" required
+                        onChange={(e) => {
+                            setPostData({ ...postData, location: e.target.value })
+                        }}
+                    />
 
-                <label htmlFor="image">Upload Image</label>
-                <input className="postInp chooseFile" type="file"
-                    onChange={imageHandler}
-                    accept="image/png, image/jpeg"
-                    required
-                />
-                <label htmlFor="description">Description</label>
-                <input className="lastPostInp lastInp" type="text" name="description" required
-                    onChange={(e) => {
-                        setPostData({ ...postData, description: e.target.value })
-                    }}
-                />
-                <hr className="bottom" />
-                <button className="submit" type="submit" onClick={postHandler}>Post</button>
-            </form>
-        </div>
+                    <label htmlFor="image">Upload Image</label>
+                    <input className="postInp chooseFile" type="file"
+                        onChange={imageHandler}
+                        accept="image/png, image/jpeg"
+                        required
+                    />
+                    <label htmlFor="description">Description</label>
+                    <input className="lastPostInp lastInp" type="text" name="description" required
+                        onChange={(e) => {
+                            setPostData({ ...postData, description: e.target.value })
+                        }}
+                    />
+                    <hr className="bottom" />
+                    <button className="submit" type="submit" >Post</button>
+                    <button onClick={() => setShow(!show)} className="submit">Cancle</button>
+                </form>
+                {/* <span className="submit" onClick={()=>setShow(!show)}>Cancle</span> */}
+            </div>
             {/* <ToastContainer/> */}
         </>
     )

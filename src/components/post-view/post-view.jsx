@@ -5,8 +5,10 @@ import Card from "../../card";
 import Header from '..//header/header'
 import React from "react";
 import "./post-view.css"
+import Form from "../postForm.js/postForm";
 
 const PostView = () => {
+    const [show, setShow] = useState(false);
     const navigate = useNavigate()
     const [posts, setPosts] = useState([])
     useEffect(() => {
@@ -37,7 +39,8 @@ const PostView = () => {
     })
     return (
         <>
-            <Header className="instaHeader" />
+            <Header className="instaHeader" setShow={setShow} show={show} />
+            {show && <Form setShow={setShow} show={show} />}
             <div className="post-container">
                 {posts.map((post, i) => {
                     return (
