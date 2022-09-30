@@ -78,7 +78,8 @@ function LandingPage() {
                             <img className='instaLogo' src={insta} alt="" />
                         </div>
 
-                        <h1 className='mobileBrowser'> welcome to InstaClone mobile browser</h1>
+                        <h1 className='mobileBrowser'> Welcome to InstaClone Mobile Browser</h1>
+                        <h1 className='desktopBrowser'> Welcome to InstaClone Desktop Browser</h1>
                         {registered ?
                             <form className='loginForm'>
                                 <input
